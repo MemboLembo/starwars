@@ -14,9 +14,13 @@ import {
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import StarshipDetails from '../sw-components/starship-details';
 
+const history = createBrowserHistory({
+  basename: process.env.PUBLIC_URL
+});
+
 export function MyRouter({isLoggedIn, onServiceChange, onLogin}) {
   return (
-    <Router>
+    <Router history={history}>
       <div className="stardb-app">
         <Header onServiceChange={onServiceChange} />
         <RandomPlanet />
@@ -55,7 +59,3 @@ export function MyRouter({isLoggedIn, onServiceChange, onLogin}) {
     </Router>
   )
 }
-
-export const history = createBrowserHistory({
-    basename: process.env.PUBLIC_URL
-});
