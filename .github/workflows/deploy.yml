@@ -16,7 +16,7 @@ jobs:
     - name: Install
       run: yarn
     - name: Build
-      run: PUBLIC_URL=https://membolembo.github.io/starwars yarn build
+      run: yarn build
     - name: Bundle
       run: mkdir ./out && mv build ./out/starwars
       
