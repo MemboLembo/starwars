@@ -16,7 +16,7 @@ jobs:
     - name: Install
       run: yarn
     - name: Build
-      run: yarn build
+      run: PUBLIC_URL=starwars yarn build
     - name: Bundle
       run: mkdir ./out && mv build ./out/starwars
       
